@@ -66,7 +66,10 @@ export default function DashboardPage() {
     } satisfies ChartConfig;
 
     const recentExpenses = useMemo(() => {
-        return expenses.slice(0, 5);
+        // Sort expenses by date descending and then slice
+        return [...expenses]
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .slice(0, 5);
     }, [expenses]);
 
     if(loading) {
