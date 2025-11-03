@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 0 84.2% 60.2%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 222.2 47.4% 11.2%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 221.2 83.2% 53.3%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --sidebar-primary: 221.2 83.2% 53.3%;
+    --sidebar-primary-foreground: 210 40% 98%;
+  }
+
+  .dark {
+    --background: 220 25% 12%;
+    --foreground: 210 40% 90%;
+    --card: 220 25% 16%;
+    --card-foreground: 210 40% 90%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 90%;
+    --primary: 210 80% 65%;
+    --primary-foreground: 220 25% 12%;
+    --secondary: 220 25% 22%;
+    --secondary-foreground: 210 40% 90%;
+    --muted: 220 25% 22%;
+    --muted-foreground: 210 30% 70%;
+    --accent: 220 25% 22%;
+    --accent-foreground: 210 40% 90%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 40% 90%;
+    --border: 220 25% 25%;
+    --input: 220 25% 25%;
+    --ring: 210 80% 65%;
+    --chart-1: 210 80% 65%;
+    --chart-2: 0 70% 55%;
+    --chart-3: 160 60% 45%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 220 25% 12%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 210 80% 65%;
+    --sidebar-accent: 220 25% 22%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-primary: 210 80% 65%;
+    --sidebar-primary-foreground: 220 25% 12%;
+  }
+
+  .neutral {
+    --background: 234 43% 94%;
+    --foreground: 231 48% 28%;
+    --card: 234 43% 99%;
+    --card-foreground: 231 48% 28%;
+    --popover: 234 43% 99%;
+    --popover-foreground: 231 48% 28%;
+    --primary: 231 48% 48%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 234 30% 90%;
+    --secondary-foreground: 231 48% 28%;
+    --muted: 234 30% 90%;
+    --muted-foreground: 231 48% 40%;
+    --accent: 261 35% 58%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 234 20% 85%;
+    --input: 234 20% 85%;
+    --ring: 231 48% 48%;
+    --chart-1: 231 48% 48%;
+    --chart-2: 0 84.2% 60.2%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 233 45% 97%;
+    --sidebar-foreground: 231 48% 28%;
+    --sidebar-border: 234 20% 85%;
+    --sidebar-ring: 231 48% 48%;
+    --sidebar-accent: 234 30% 90%;
+    --sidebar-accent-foreground: 231 48% 28%;
+    --sidebar-primary: 231 48% 48%;
+    --sidebar-primary-foreground: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+  p, div, span, label, button, a {
+    @apply font-headline;
+  }
+  .font-mono {
+    @apply font-body;
+  }
+}
+
+@layer components {
+  .table-cell-highlight {
+      @apply bg-primary/10 dark:bg-primary/20;
+  }
+  .table-row-highlight {
+      @apply bg-muted/50;
+  }
+  .table-row-zebra {
+    @apply even:bg-muted/30;
+  }
+  .text-positive {
+    @apply text-green-600 dark:text-green-500;
+  }
+  .text-negative {
+    @apply text-destructive;
+  }
+  .text-attention {
+    @apply text-orange-600 dark:text-orange-500;
+  }
+}
