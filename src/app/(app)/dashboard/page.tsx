@@ -57,11 +57,11 @@ export default function DashboardPage() {
     const chartConfig = {
       'التكلفة التقديرية': {
         label: 'التكلفة التقديرية',
-        color: 'hsl(var(--chart-2))',
+        color: 'hsl(var(--chart-1))',
       },
       'المصروف الفعلي': {
         label: 'المصروف الفعلي',
-        color: 'hsl(var(--chart-1))',
+        color: 'hsl(var(--chart-2))',
       },
     } satisfies ChartConfig;
 
