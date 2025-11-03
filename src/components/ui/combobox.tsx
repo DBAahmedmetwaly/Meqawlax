@@ -33,8 +33,7 @@ export function Combobox({ options, placeholder, notFoundText, value, onSelect }
   
   const handleSelect = (currentValue: string) => {
     if (onSelect) {
-        const newValue = currentValue === value ? "" : currentValue;
-        onSelect(newValue);
+        onSelect(currentValue);
     }
     setOpen(false)
   }
@@ -82,3 +81,5 @@ export function Combobox({ options, placeholder, notFoundText, value, onSelect }
     </Popover>
   )
 }
+
+    
