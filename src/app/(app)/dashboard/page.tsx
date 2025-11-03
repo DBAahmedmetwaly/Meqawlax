@@ -1,5 +1,4 @@
 
-
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
@@ -156,8 +155,8 @@ export default function DashboardPage() {
                                     <YAxis tickFormatter={(value) => new Intl.NumberFormat('ar-EG', { notation: 'compact', compactDisplay: 'short' }).format(value as number)} />
                                     <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
                                     <Legend />
-                                    <Bar dataKey="التكلفة التقديرية" fill="var(--color-التكلفة التقديرية)" radius={4} />
-                                    <Bar dataKey="المصروف الفعلي" fill="var(--color-المصروف الفعلي)" radius={4} />
+                                    <Bar dataKey="التكلفة التقديرية" fill={chartConfig['التكلفة التقديرية'].color} radius={4} />
+                                    <Bar dataKey="المصروف الفعلي" fill={chartConfig['المصروف الفعلي'].color} radius={4} />
                                 </BarChart>
                             </ResponsiveContainer>
                         </ChartContainer>
